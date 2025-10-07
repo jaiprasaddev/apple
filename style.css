@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 
 *{
     margin: 0;
@@ -15,18 +13,48 @@ html, body{
 }
 
 
-.nav{
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 42px;
-    padding: 14px;
+    padding: 14px 0;
+
+    background: rgba(255, 255, 255, 0.703); /* translucent white */
+    backdrop-filter: blur(15px); /* blur background */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    z-index: 999;
 }
 
-.nav h4{
+.nav h4 {
     font-size: 12px;
     font-weight: 400;
+    cursor: pointer;
+    color: #333; /* dark text for visibility */
+    transition: color 0.3s;
 }
+
+.nav h4:hover {
+    color: #000;
+}
+
+.nav i {
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav i:hover {
+    color: #000;
+}
+
 
 .hero1{
     position: relative;
@@ -70,10 +98,109 @@ html, body{
     top: 80%;
     color: royalblue;
     background: transparent;
-    border-color: royalblue;
+    border: 2px solid royalblue;
+    cursor: pointer;
 }
 
 .hero1 button:hover{
     color: white;
     background: royalblue;
+}
+
+
+.hero2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 47px;
+    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-17-pro/hero_iphone_17_pro__bknyzxfk2agi_mediumtall.jpg);
+    height: 70%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero2 h2,p{
+    color: white;
+    padding-bottom: 20px;
+}
+.hero2 h2{
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.07;
+}
+
+.hero2 p{
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.learn button{
+    left: 42%;
+    position: absolute;
+    color: white;
+    background: royalblue;
+    padding: 11px 15px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+    border: 2px solid royalblue;
+    cursor: pointer;
+}
+
+.buy button{
+    position: absolute;
+    right: 43%;
+    color: royalblue;
+    background: transparent;
+    padding: 11px 20px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+    border: 1px solid royalblue;
+    cursor: pointer;
+}
+
+.learn button:hover{
+    background-color: rgb(77, 115, 231);
+}
+
+.buy button:hover{
+    background-color: royalblue;
+    color: white;
+}
+
+
+.air{
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 47px;
+    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-air/hero_iphone_air__0gxyavihpiqu_mediumtall.jpg);
+    height: 70%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.air h2,p{
+    padding-bottom: 20px;
+}
+.air h2{
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.07;
+}
+
+.air p{
+    color: black;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.1;
 }
