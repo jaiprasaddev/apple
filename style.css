@@ -207,7 +207,7 @@ html, body{
 }
 
 
-.product{
+/*.product{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -215,53 +215,170 @@ html, body{
                          "airpods watch2"
                          "macbook trade"
     ;
-    height: 100%;
-    width: 100%;
     gap: 10px;
     padding: 10px;
+    width: 100%;
+    height: 100%;
 }
 
-.iphone{
+
+.product>div{
+    width: 100%;
+    height: 100%;
+    background-size: cover;         
+    background-position: center;   
+    background-repeat: no-repeat;  
+    border-radius: 10px;
+}
+
+.iphone17 {
+    height: 100%;
+    width: 100%;
     grid-area: iphone17;
-  
+    background-image: url("https://www.apple.com/v/home/ch/images/promos/iphone-17/promo_iphone_17__bhofuohbsu3m_medium.jpg");
 }
 
-.watch{
+.watch {
+    height: 100%;
+    width: 100%;
     grid-area: watch;
-  
+    background-image: url("https://www.apple.com/in/home/images/promos/apple-watch-series-11/promo_apple_watch_series_11__b63hxviqvonm_medium.jpg");
 }
 
-.airpods{
+.airpods {
+    height: 100%;
+    width: 100%;
     grid-area: airpods;
-   
+    background-image: url("https://www.apple.com/v/home/ch/images/promos/airpods-pro-3/promo_airpodspro_3__f6xmza7bglei_medium.jpg");
 }
 
-.watch2{
+.watch2 {
+    height: 100%;
+    width: 100%;
     grid-area: watch2;
-  
+    background-image: url("https://www.apple.com/in/home/images/promos/apple-watch-se-3/promo_apple_watch_se_3__fz5y29qx5mmy_large.jpg");
 }
 
-.macbook{
+.macbook {
+    height: 100%;
+    width: 100%;
     grid-area: macbook;
-  
+    background-image: url("https://www.apple.com/v/home/ch/images/promos/macbook-air/promo_macbook_air__fqowrtnxewqe_medium.jpg");
 }
 
-.trade{
+.trade {
+    height: 100%;
+    width: 100%;
     grid-area: trade;
-    
-}
+    background-image: url("https://www.apple.com/v/home/ch/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_medium.jpg");
+}*/
 
 
-.product img {
+
+
+.product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 600px; /* perfect height for desktop */
+  gap: 12px;
+  padding: 12px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+  box-sizing: border-box;
 }
 
+/* Each card box */
+.product > div {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #1d1d1f;
+}
 
+/* Headings and text */
+.product h2 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
 
+.product p {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* ✅ Button wrapper (fix overlap issue) */
+.product .buttons {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+
+/* Buttons styling */
+.product .buttons button {
+  padding: 8px 18px;
+  border-radius: 25px;
+  border: 1.5px solid royalblue;
+  background: royalblue;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.product .buttons button.buy {
+  background: transparent;
+  color: royalblue;
+}
+
+.product .buttons button:hover {
+  background: #0047ff;
+}
+
+.product .buttons button.buy:hover {
+  background: royalblue;
+  color: white;
+}
+
+/* Background images */
+.iphone17 {
+  background-image: url("https://www.apple.com/v/home/ch/images/promos/iphone-17/promo_iphone_17__bhofuohbsu3m_medium.jpg");
+}
+
+.watch {
+  background-image: url("https://www.apple.com/in/home/images/promos/apple-watch-series-11/promo_apple_watch_series_11__b63hxviqvonm_medium.jpg");
+}
+
+.airpods {
+  background-image: url("https://www.apple.com/v/home/ch/images/promos/airpods-pro-3/promo_airpodspro_3__f6xmza7bglei_medium.jpg");
+}
+
+.watch2 {
+  background-image: url("https://www.apple.com/in/home/images/promos/apple-watch-se-3/promo_apple_watch_se_3__fz5y29qx5mmy_large.jpg");
+}
+
+.macbook {
+  background-image: url("https://www.apple.com/v/home/ch/images/promos/macbook-air/promo_macbook_air__fqowrtnxewqe_medium.jpg");
+}
+
+.trade {
+  background-image: url("https://www.apple.com/v/home/ch/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_medium.jpg");
+}
 
 
 
